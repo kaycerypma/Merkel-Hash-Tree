@@ -1,0 +1,17 @@
+from google.colab import drive
+
+# Mount Google Drive
+drive.mount('/content/drive')
+
+# Path to files in Google Drive
+path_to_files = '/content/drive/My Drive/Colab Notebooks/'
+
+# List of file names
+files = ['L1.txt', 'L2.txt', 'L3.txt', 'L4.txt']
+
+# Add file path to file names
+files = [path_to_files + file for file in files]
+
+# Compute top hash
+top_hash = merkle_tree(files)
+print('Top hash:', top_hash)
