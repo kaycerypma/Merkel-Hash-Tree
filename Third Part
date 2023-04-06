@@ -1,0 +1,4 @@
+# Modify one of the files and compute the top hash again
+os.system('echo "Modified content" >> ' + os.path.join(path_to_files, 'L1.txt'))
+new_top_hash = merkle_tree(files)
+print('New top hash:', new_top_hash)
